@@ -1,0 +1,74 @@
+---
+import IGIcons from './ICONS/IGIcons.astro'
+import GITIcon from './ICONS/GITIcon.astro'
+import LInkedInIcon from './ICONS/LInkedInIcon.astro'
+import X from './ICONS/X.astro'
+---
+
+<script>
+	const $Open = document.querySelector('.fa-bars')
+	const $Close = document.querySelector('.fa-xmark')
+	const $BodyNav = document.getElementById('BodyNav')
+
+	$Open.addEventListener('click', () => {
+		$BodyNav.classList.toggle('hidden')
+		$BodyNav.classList.toggle('flex')
+		$Close.classList.toggle('hidden')
+		$Open.classList.toggle('hidden')
+	})
+
+	$Close.addEventListener('click', () => {
+		$BodyNav.classList.toggle('hidden')
+		$BodyNav.classList.toggle('flex')
+		$Close.classList.toggle('hidden')
+		$Open.classList.toggle('hidden')
+	})
+</script>
+
+<nav class="fixed w-[100vw] bg-Orange pt-6 lg:hidden">
+	<div class="flex items-center gap-7 px-7 py-4 duration-200 lg:hidden">
+		<i class="fa-solid fa-bars cursor-pointer text-4xl text-White transition-all duration-300"></i>
+		<i
+			class="fa-solid fa-xmark hidden cursor-pointer text-5xl text-White transition-all duration-300"
+		></i>
+		<a
+			href="#"
+			class="relative font-Oswald text-7xl text-White duration-300 after:absolute after:left-0 after:top-[75px] after:h-[3px] after:w-[0%] after:bg-White after:duration-300 after:content-[''] hover:text-Gray after:hover:w-[100%]"
+		>
+			JP<span class="text-4xl">ABLO</span>
+		</a>
+	</div>
+
+	<div
+		class="hidden w-[100vw] flex-col justify-center gap-10 bg-Orange p-7 text-center transition-all duration-500"
+		id="BodyNav"
+	>
+		<a
+			href="/"
+			class="cursor-pointer rounded-2xl bg-BGColor p-4 text-3xl text-white hover:bg-white hover:text-Orange"
+			>Home</a
+		>
+		<a
+			href="#About"
+			class="cursor-pointer rounded-2xl bg-BGColor p-4 text-3xl text-white hover:bg-white hover:text-Orange"
+			>About</a
+		>
+		<a
+			href="#My-Services"
+			class="cursor-pointer rounded-2xl bg-BGColor p-4 text-3xl text-white hover:bg-white hover:text-Orange"
+			>Services</a
+		>
+		<a
+			href="#Contact"
+			class="cursor-pointer rounded-2xl bg-BGColor p-4 text-3xl text-white hover:bg-white hover:text-Orange"
+			>Contact</a
+		>
+
+		<div class="flex justify-around rounded-2xl bg-BGColor p-3">
+			<a href="https://www.instagram.com/commitpablo/" target="_blank"><IGIcons /></a>
+			<a href="https://github.com/commitpablo" target="_blank"><GITIcon /></a>
+			<a href="https://www.linkedin.com/in/commitpablo/" target="_blank"><LInkedInIcon /></a>
+			<a href="https://x.com/commitpabloG" target="_blank"><X /></a>
+		</div>
+	</div>
+</nav>

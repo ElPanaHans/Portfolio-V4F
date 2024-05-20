@@ -1,0 +1,11 @@
+---
+interface Props {
+	body: string
+}
+const { body } = Astro.props
+---
+
+<div class="mx-5 flex items-center justify-center gap-2 rounded-2xl bg-Orange p-3 font-Poppins">
+	<slot />
+	<p class="text-xl">{body}</p>
+</div>

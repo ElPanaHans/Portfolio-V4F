@@ -1,0 +1,31 @@
+---
+import IGIcons from './ICONS/IGIcons.astro'
+import GITIcon from './ICONS/GITIcon.astro'
+import LInkedInIcon from './ICONS/LInkedInIcon.astro'
+import X from './ICONS/X.astro'
+---
+
+<nav class="flex justify-center gap-10">
+	<a
+		href="#About"
+		class="relative font-Oswald text-xl after:absolute after:left-0 after:top-[25px] after:h-[3px] after:w-[0%] after:bg-Orange after:duration-300 after:content-[''] after:hover:w-[100%]"
+		>Home</a
+	>
+	<a
+		href="#"
+		class="relative font-Oswald text-xl after:absolute after:left-0 after:top-[25px] after:h-[3px] after:w-[0%] after:bg-Orange after:duration-300 after:content-[''] after:hover:w-[100%]"
+		>About</a
+	>
+
+	<slot />
+	<a
+		href="#My-Services"
+		class="relative font-Oswald text-xl after:absolute after:left-0 after:top-[25px] after:h-[3px] after:w-[0%] after:bg-Orange after:duration-300 after:content-[''] after:hover:w-[100%]"
+		>Services</a
+	>
+	<a
+		href="#Contact"
+		class="relative font-Oswald text-xl after:absolute after:left-0 after:top-[25px] after:h-[3px] after:w-[0%] after:bg-Orange after:duration-300 after:content-[''] after:hover:w-[100%]"
+		>Contact</a
+	>
+</nav>
